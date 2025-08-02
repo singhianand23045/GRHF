@@ -79,8 +79,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center bg-gradient-to-r ${drawNumbersCfg?.bg ?? ""} ${drawNumbersCfg?.font ?? ""}`}
         style={{
-          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "200px"}`,
-          minHeight: drawNumbersCfg?.minHeight ?? "200px",
+          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "250px"}`,
+          minHeight: drawNumbersCfg?.minHeight ?? "250px",
         }}
       >
         {sectionMap["drawNumbers"]}
