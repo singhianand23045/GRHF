@@ -38,7 +38,7 @@ export default function ConfirmedPicksList() {
       )}
       
       <ScrollArea className="w-full max-w-md flex-1 px-2 py-2">
-        <div className="flex flex-col items-center gap-4"> {/* This div now contains all scrollable content */}
+        <div className="flex flex-col items-center gap-8"> {/* Changed gap-4 to gap-8 */}
           {/* Display all confirmed pick sets */}
           {confirmedPicksSets.map((pickSetNumbers, index) => {
             console.log(`[ConfirmedPicksList] Rendering ConfirmedNumbersDisplay for pick set ${index + 1}:`, pickSetNumbers);
@@ -49,7 +49,7 @@ export default function ConfirmedPicksList() {
 
           {/* Show the number grid if user is picking a new pick set */}
           {showNumberGridForPicking && (
-            <div className="w-full flex flex-col items-center gap-4"> {/* Removed mt-4 here, gap-4 on parent handles it */}
+            <div className="w-full flex flex-col items-center gap-4">
               {confirmedPicksSets.length === 0 && ( // Show "Pick 6 numbers" for the very first selection
                 <div className="mb-2 font-semibold text-[#16477d] text-lg select-none">
                   Pick 6 numbers
@@ -78,7 +78,7 @@ export default function ConfirmedPicksList() {
             <Button
               onClick={startNewPickSetSelection}
               size="lg"
-              className="w-full max-w-xs transition-all" // Removed mt-0, gap-4 on parent handles it
+              className="w-full max-w-xs transition-all"
             >
               <PlusCircle className="mr-2 w-5 h-5" />
               Add next set of numbers
