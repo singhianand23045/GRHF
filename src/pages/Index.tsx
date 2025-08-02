@@ -33,7 +33,7 @@ function AppContent() {
 
           {/* Assistant Tab Content - ONLY CHANGES HERE */}
           <div 
-            className="flex flex-col flex-1 w-full min-h-0 px-2 py-8 pb-24" // This div now correctly fills height and applies padding
+            className="flex flex-col flex-1 w-full min-h-0 px-2 py-2 pb-24" // Changed py-8 to py-2
             style={{ display: activeTab === "assistant" ? "flex" : "none" }}
           >
             <h1 className="text-3xl font-bold mt-4 mb-1 text-slate-700">
