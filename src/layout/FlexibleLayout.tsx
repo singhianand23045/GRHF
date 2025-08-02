@@ -57,8 +57,8 @@ export default function FlexibleLayout() {
       <div
         className="w-full flex flex-row"
         style={{
-          flex: `${(jackpotCfg?.flex ?? 3)} 0 ${jackpotCfg?.minHeight ?? "120px"}`,
-          minHeight: jackpotCfg?.minHeight ?? "120px",
+          flex: `${(jackpotCfg?.flex ?? 3)} 0 ${jackpotCfg?.minHeight ?? "80px"}`,
+          minHeight: jackpotCfg?.minHeight ?? "80px",
         }}
       >
         {/* Jackpot: left, 50% */}
@@ -79,8 +79,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center bg-gradient-to-r ${drawNumbersCfg?.bg ?? ""} ${drawNumbersCfg?.font ?? ""}`}
         style={{
-          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "200px"}`,
-          minHeight: drawNumbersCfg?.minHeight ?? "200px",
+          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "160px"}`,
+          minHeight: drawNumbersCfg?.minHeight ?? "160px",
         }}
       >
         {sectionMap["drawNumbers"]}
@@ -101,8 +101,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center bg-gradient-to-r ${numberSelectCfg?.bg ?? ""} ${numberSelectCfg?.font ?? ""}`}
         style={{
-          flex: `${numberSelectCfg?.flex ?? 5} 0 ${numberSelectCfg?.minHeight ?? "250px"}`,
-          minHeight: numberSelectCfg?.minHeight ?? "250px",
+          flex: `${numberSelectCfg?.flex ?? 5} 0 ${numberSelectCfg?.minHeight ?? "350px"}`,
+          minHeight: numberSelectCfg?.minHeight ?? "350px",
         }}
       >
         {sectionMap["numberSelect"]}
