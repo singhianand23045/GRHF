@@ -26,7 +26,7 @@ export default function RevealPanel() {
   const { state } = useTimer();
 
   // Define the ResultBar's height (adjust as needed for nice appearance)
-  const RESULT_BAR_HEIGHT = 44; // px, fits 1-line ResultBar text + spacing
+  const RESULT_BAR_HEIGHT = 36; // px, fits 1-line ResultBar text + spacing
 
   // Spacing between message and ball grid: only 0.5% of screen height
   const DRAWN_GRID_MARGIN_TOP = "0.5vh";
