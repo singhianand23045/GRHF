@@ -51,7 +51,7 @@ export const layoutConfig: SectionLayoutConfig[] = [
     flex: 1,
     minHeight: "60px",
     font: "font-semibold text-green-900",
-    bg: "from-green-50 to-green-100"
+    bg: "from-white to-green-50" // Changed from "from-green-50 to-green-100"
   },
   {
     key: "numberSelect",
