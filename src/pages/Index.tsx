@@ -9,21 +9,20 @@ function AppContent() {
   const { activeTab } = useTab();
 
   return (
-    <div className="min-h-screen min-w-full flex flex-col items-center justify-center bg-gradient-to-tr from-blue-100 via-indigo-100 to-blue-50">
-      <div
-        className="relative flex flex-col items-center justify-center shadow-xl rounded-2xl border border-gray-200 bg-white overflow-hidden"
-        style={{
-          width: "min(100vw, 402px)",
-          height: "100vh",
-          maxWidth: "100vw",
-          maxHeight: "100vh",
-        }}
-      >
+    <div
+      className="relative flex flex-col items-center justify-center shadow-xl rounded-2xl border border-gray-200 bg-white overflow-hidden"
+      style={{
+        width: "min(100vw, 402px)",
+        height: "100dvh", // Changed from 100vh
+        maxWidth: "100vw",
+        maxHeight: "100dvh", // Changed from 100vh
+      }}
+    >
         {/* MAIN CONTENT: subtract bottom nav height (4rem) from viewport height */}
         <main 
           className="flex flex-col w-full items-center h-full overflow-hidden" // Main is now a fixed-height flex container, no overflow here
           style={{
-            height: "calc(100vh - 4rem)", // Fixed height for main content area
+            height: "calc(100dvh - 4rem)", // Changed from 100vh
           }}
         >
           {/* Home Tab Content - NO CHANGES TO THIS DIV */}
@@ -44,7 +43,6 @@ function AppContent() {
         </main>
         {/* Bottom Tabs */}
         <MainTabs />
-      </div>
     </div>
   );
 }
