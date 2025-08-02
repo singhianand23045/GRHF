@@ -41,7 +41,7 @@ export const layoutConfig: SectionLayoutConfig[] = [
   {
     key: "drawNumbers",
     flex: 4,
-    minHeight: "200px",
+    minHeight: "160px", // Changed from 200px to 160px
     font: "font-normal text-indigo-900",
     // Unified background for consistency
     bg: "from-white to-green-50"
