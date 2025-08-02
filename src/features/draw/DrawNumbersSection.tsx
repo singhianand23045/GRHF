@@ -3,7 +3,7 @@ import { DrawEngineProvider } from "./DrawEngineContext";
 import RevealPanel from "./RevealPanel";
 import { useTimer } from "../timer/timer-context";
 
-const LOGICAL_HEIGHT = 852;
+const LOGICAL_HEIGHT = 844;
 const DRAW_SECTION_HEIGHT = 0.30;
 
 export default function DrawNumbersSection() {
