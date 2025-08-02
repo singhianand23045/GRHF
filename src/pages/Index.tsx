@@ -27,7 +27,7 @@ function AppContent() {
           }}
         >
           {/* Home Tab Content - NO CHANGES TO THIS DIV */}
-          <div style={{ display: activeTab === "home" ? "block" : "none" }} className="px-4 py-8 w-full h-full">
+          <div style={{ display: activeTab === "home" ? "block" : "none" }} className="px-4 py-2 w-full h-full">
             <FlexibleLayout />
           </div>
 
