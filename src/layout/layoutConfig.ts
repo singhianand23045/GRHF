@@ -25,7 +25,7 @@ export const layoutConfig: SectionLayoutConfig[] = [
   {
     key: "jackpot",
     flex: 3,
-    minHeight: "120px",
+    minHeight: "80px", // Changed from 120px to 80px
     font: "font-black text-6xl text-robinhood-green", // Bolder, Robinhood-style
     // Set to plain white
     bg: "from-white to-white"
