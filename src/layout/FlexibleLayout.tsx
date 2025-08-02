@@ -46,8 +46,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center ${headerCfg?.bg ?? ""} ${headerCfg?.font ?? ""}`}
         style={{
-          flex: `${headerCfg?.flex ?? 1} 0 ${headerCfg?.minHeight ?? "60px"}`,
-          minHeight: headerCfg?.minHeight ?? "60px",
+          flex: `${headerCfg?.flex ?? 1} 0 ${headerCfg?.minHeight ?? "40px"}`,
+          minHeight: headerCfg?.minHeight ?? "40px",
         }}
       >
         {sectionMap["header"]}
