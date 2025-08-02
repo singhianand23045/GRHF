@@ -13,16 +13,16 @@ function AppContent() {
       className="relative flex flex-col items-center justify-center shadow-xl rounded-2xl border border-gray-200 bg-white overflow-hidden"
       style={{
         width: "min(100vw, 402px)",
-        height: "100dvh", // Changed from 100vh
+        height: "100vh", // Reverted from 100dvh
         maxWidth: "100vw",
-        maxHeight: "100dvh", // Changed from 100vh
+        maxHeight: "100vh", // Reverted from 100dvh
       }}
     >
         {/* MAIN CONTENT: subtract bottom nav height (4rem) from viewport height */}
         <main 
           className="flex flex-col w-full items-center h-full overflow-hidden" // Main is now a fixed-height flex container, no overflow here
           style={{
-            height: "calc(100dvh - 4rem)", // Changed from 100vh
+            height: "calc(100vh - 4rem)", // Reverted from 100dvh
           }}
         >
           {/* Home Tab Content - NO CHANGES TO THIS DIV */}
