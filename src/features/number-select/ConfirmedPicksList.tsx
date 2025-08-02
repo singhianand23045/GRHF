@@ -38,7 +38,7 @@ export default function ConfirmedPicksList() {
       )}
       
       <ScrollArea className="w-full max-w-md flex-1 px-2 py-2">
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4"> {/* This div now contains all scrollable content */}
           {/* Display all confirmed pick sets */}
           {confirmedPicksSets.map((pickSetNumbers, index) => {
             console.log(`[ConfirmedPicksList] Rendering ConfirmedNumbersDisplay for pick set ${index + 1}:`, pickSetNumbers);
@@ -49,13 +49,12 @@ export default function ConfirmedPicksList() {
 
           {/* Show the number grid if user is picking a new pick set */}
           {showNumberGridForPicking && (
-            <div className="w-full flex flex-col items-center gap-4 mt-4">
+            <div className="w-full flex flex-col items-center gap-4"> {/* Removed mt-4 here, gap-4 on parent handles it */}
               {confirmedPicksSets.length === 0 && ( // Show "Pick 6 numbers" for the very first selection
                 <div className="mb-2 font-semibold text-[#16477d] text-lg select-none">
                   Pick 6 numbers
                 </div>
               )}
-              {/* Removed "Pick next 6 numbers" message */}
               <NumberGrid />
               <Button
                 onClick={confirm}
@@ -73,32 +72,32 @@ export default function ConfirmedPicksList() {
               )}
             </div>
           )}
+
+          {/* Only show "Add next set of numbers" button if not currently picking a new pick set AND can add more */}
+          {!showNumberGridForPicking && canAddMorePickSets && (
+            <Button
+              onClick={startNewPickSetSelection}
+              size="lg"
+              className="w-full max-w-xs transition-all" // Removed mt-0, gap-4 on parent handles it
+            >
+              <PlusCircle className="mr-2 w-5 h-5" />
+              Add next set of numbers
+            </Button>
+          )}
+          
+          {/* Messages */}
+          {confirmedPicksSets.length === 3 && timerState === "OPEN" && (
+            <div className="text-sm mt-4 text-muted-foreground text-center">
+              Maximum 3 sets of numbers confirmed for this draw.
+            </div>
+          )}
+          {timerState === "CUT_OFF" && confirmedPicksSets.length > 0 && (
+            <div className="text-sm mt-4 text-yellow-700 font-medium text-center">
+              Numbers locked. Waiting for draw...
+            </div>
+          )}
         </div>
       </ScrollArea>
-
-      {/* Only show "Add next set of numbers" button if not currently picking a new pick set AND can add more */}
-      {!showNumberGridForPicking && canAddMorePickSets && (
-        <Button
-          onClick={startNewPickSetSelection}
-          size="lg"
-          className="w-full max-w-xs mt-0 transition-all"
-        >
-          <PlusCircle className="mr-2 w-5 h-5" />
-          Add next set of numbers
-        </Button>
-      )}
-      
-      {/* Messages */}
-      {confirmedPicksSets.length === 3 && timerState === "OPEN" && (
-        <div className="text-sm mt-4 text-muted-foreground text-center">
-          Maximum 3 sets of numbers confirmed for this draw.
-        </div>
-      )}
-      {timerState === "CUT_OFF" && confirmedPicksSets.length > 0 && (
-        <div className="text-sm mt-4 text-yellow-700 font-medium text-center">
-          Numbers locked. Waiting for draw...
-        </div>
-      )}
     </div>
   );
 }
