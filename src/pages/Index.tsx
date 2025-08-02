@@ -2,8 +2,8 @@ import MainTabs, { TabProvider, useTab } from "@/components/MainTabs";
 import FlexibleLayout from "@/layout/FlexibleLayout";
 import PlayAssistant from "@/features/assistant/PlayAssistant";
 
-const LOGICAL_WIDTH = 393;  // iPhone 16  logical width
-const LOGICAL_HEIGHT = 852; // iPhone 16  logical height
+const LOGICAL_WIDTH = 390;  // iPhone 16  logical width
+const LOGICAL_HEIGHT = 844; // iPhone 16  logical height
 
 function AppContent() {
   const { activeTab } = useTab();
