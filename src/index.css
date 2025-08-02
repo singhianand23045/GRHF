@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Robinhood Color Theme Variables */
+@layer base {
+  :root {
+    --background: 144 53% 98%;            /* #f5f7fa - pale background */
+    --foreground: 0 0% 10%;               /* almost black - #19181a */
+
+    --card: 0 0% 100%;                    /* #fff */
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 132 100% 40%;              /* #00c805 */
+    --primary-foreground: 0 0% 100%;      /* white */
+
+    --secondary: 139 100% 25%;            /* #00af5b */
+    --secondary-foreground: 0 0% 100%;    /* white */
+
+    --muted: 0 0% 90%;                    /* #e9ebed */
+    --muted-foreground: 144 3% 44%;       /* #72807a */
+
+    --accent: 144 53% 98%;                /* #f5f7fa */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 6 100% 67%;            /* #ff6859 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 13% 95%;                /* #e9ebed */
+    --input: 214.3 13% 95%;               /* #e9ebed */
+    --ring: 132 100% 40%;                 /* #00c805 Robinhood green */
+
+    --radius: 0.6rem;
+
+    --sidebar-background: 144 53% 98%;    /* #f5f7fa */
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 132 100% 40%;      /* #00c805 */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 86%;           /* #dcdcdc */
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 214 13% 88%;        /* lighter gray border */
+    --sidebar-ring: 132 100% 40%;         /* #00c805 */
+  }
+
+  .dark {
+    --background: 0 0% 10%;               /* #19181a */
+    --foreground: 144 53% 98%;            /* #f5f7fa */
+
+    --card: 0 0% 16%;                     /* #2b2c2e */
+    --card-foreground: 144 53% 98%;
+
+    --popover: 0 0% 16%;
+    --popover-foreground: 144 53% 98%;
+
+    --primary: 132 100% 40%;              /* #00c805 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 139 100% 25%;            /* #00af5b */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 30%;                    /* #4f4f50 */
+    --muted-foreground: 144 3% 64%;
+
+    --accent: 0 0% 24%;
+    --accent-foreground: 144 53% 98%;
+
+    --destructive: 6 100% 55%;            /* #ff6859 */
+    --destructive-foreground: 144 53% 98%;
+
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 132 100% 40%;                 /* #00c805 */
+    --sidebar-background: 0 0% 10%;       /* #19181a */
+    --sidebar-foreground: 144 53% 98%;
+    --sidebar-primary: 132 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 24%;
+    --sidebar-accent-foreground: 144 53% 98%;
+    --sidebar-border: 0 0% 32%;
+    --sidebar-ring: 132 100% 40%;
+  }
+}
+
+/* DEFAULT FONT FAMILY OVERRIDE */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-family: 'Inter', 'IBM Plex Sans', system-ui, Arial, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-shake {
+    animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
