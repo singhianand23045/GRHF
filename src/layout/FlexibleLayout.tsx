@@ -28,7 +28,7 @@ export default function FlexibleLayout() {
 
   // Spacer utility for gaps
   const SectionGap = () => (
-    <div className="flex-none h-2" aria-hidden="true" />
+    <div className="flex-none h-1" aria-hidden="true" />
   );
 
   return (
