@@ -18,7 +18,7 @@ export const layoutConfig: SectionLayoutConfig[] = [
   {
     key: "header",
     flex: 1,
-    minHeight: "40px",
+    minHeight: "25px",
     font: "font-extrabold tracking-tight text-3xl text-[#1a1855]",
     bg: ""
   },
