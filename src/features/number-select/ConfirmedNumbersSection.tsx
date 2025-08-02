@@ -16,12 +16,11 @@ export default function ConfirmedNumbersSection() {
 
   return (
     <div
-      className="flex flex-col items-center justify-center w-full flex-shrink-0 flex-grow-0 overflow-y-hidden" // Reverted to fixed height and overflow-y-hidden, removed flex-1
+      className="flex flex-col items-center justify-center w-full flex-shrink-0 flex-grow-0 overflow-y-hidden"
       style={{
-        height: `${0.4 * 100}%`, // Reverted to fixed height
-        minHeight: Math.floor(LOGICAL_HEIGHT * 0.4), // Reverted to fixed minHeight
-        maxHeight: `${0.4 * 100}%`, // Reverted to fixed maxHeight
-        flexBasis: `${0.4 * 100}%`, // Reverted to fixed flexBasis
+        height: "40%",
+        minHeight: Math.floor(LOGICAL_HEIGHT * 0.4),
+        maxHeight: Math.ceil(LOGICAL_HEIGHT * 0.4),
       }}
     >
       {showDemoComplete ? (
