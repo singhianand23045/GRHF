@@ -79,8 +79,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center bg-gradient-to-r ${drawNumbersCfg?.bg ?? ""} ${drawNumbersCfg?.font ?? ""}`}
         style={{
-          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "250px"}`,
-          minHeight: drawNumbersCfg?.minHeight ?? "250px",
+          flex: `${drawNumbersCfg?.flex ?? 4} 0 ${drawNumbersCfg?.minHeight ?? "220px"}`,
+          minHeight: drawNumbersCfg?.minHeight ?? "220px",
         }}
       >
         {sectionMap["drawNumbers"]}
@@ -101,8 +101,8 @@ export default function FlexibleLayout() {
       <div
         className={`w-full flex items-center justify-center bg-gradient-to-r ${numberSelectCfg?.bg ?? ""} ${numberSelectCfg?.font ?? ""}`}
         style={{
-          flex: `${numberSelectCfg?.flex ?? 5} 0 ${numberSelectCfg?.minHeight ?? "350px"}`,
-          minHeight: numberSelectCfg?.minHeight ?? "350px",
+          flex: `${numberSelectCfg?.flex ?? 5} 0 ${numberSelectCfg?.minHeight ?? "300px"}`,
+          minHeight: numberSelectCfg?.minHeight ?? "300px",
         }}
       >
         {sectionMap["numberSelect"]}
